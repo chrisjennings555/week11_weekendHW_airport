@@ -30,10 +30,11 @@ public class Plane {
     }
 
     public int findPassengerIndex(Passenger passenger){
-        return this.passengers.indexOf(passenger.name);
+        return this.passengers.indexOf(passenger);
     }
 
-    public void removePassenger() {
-        this.passengers.remove(0);
+    public void removePassenger(Passenger passenger) {
+        int index = findPassengerIndex(passenger);
+        this.passengers.remove(index);
     }
 }
