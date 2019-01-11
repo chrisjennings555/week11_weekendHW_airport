@@ -1,6 +1,6 @@
 public class Passenger {
 
-    private String name;
+    public String name;
     private int wallet;
 
     public Passenger(String name, int wallet){
