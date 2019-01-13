@@ -34,7 +34,7 @@ public class Plane {
     }
 
     public void removePassenger(Passenger passenger) {
-        int index = findPassengerIndex(passenger);
-        this.passengers.remove(index);
+        int passengerIndex = findPassengerIndex(passenger);
+        this.passengers.remove(passengerIndex);
     }
 }
