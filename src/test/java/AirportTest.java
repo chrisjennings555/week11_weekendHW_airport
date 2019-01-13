@@ -54,4 +54,15 @@ public class AirportTest {
         airport.addPlaneToRunway(plane1);
         assertEquals(1, airport.getPlaneCountRunway());
     }
+
+    @Test
+    public void planeCanBeSentFromHangarToRunway(){
+        airport.addPlaneToHangar(plane1);
+        assertEquals(1, airport.getPlaneCountHangar());
+        airport.sendPlaneFromHangarToRunway(plane1);
+        assertEquals(1, airport.getPlaneCountRunway());
+        assertEquals(0, airport.getPlaneCountHangar());
+    }
+
+
 }

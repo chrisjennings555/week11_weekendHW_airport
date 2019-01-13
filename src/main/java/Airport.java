@@ -43,5 +43,11 @@ public class Airport {
         return this.runway.getPlaneCount();
     }
 
+    public void sendPlaneFromHangarToRunway(Plane plane){
+        int departingIndex = this.hangar.indexOf(plane);
+        Plane departingPlane = this.hangar.remove(departingIndex);
+        addPlaneToRunway(departingPlane);
+    }
+
 }
 
